@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=fr>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/styleshangman.css">
+</head>
+
+<body>
+    <header class="top">
+        <h1 class="top_titre" data-text="&nbsp;◊ Bienvenue sur Hangman ◊&nbsp;">&nbsp;◊ Bienvenue sur Hangman ◊&nbsp;
+        </h1>
+    </header>
+
+    <div class="b_body">
+        <div class="b_box">
+            <span class="b_place txt">{{.WordStatus}}</span>
+            <span class="b_place txt"> Entrez une lettre</span>
+            <span class="b_place">
+                <form method="POST">
+                    <input class="bp_input" type="text" id="letter" name="letter">
+                    <input class="bp_style" style="--clr:#fff" type="submit" value="Valider">
+                </form>
+            </span>
+            <span class="b_place txt">Nombre d'essais {{.NumTries}}</span>
+            <span class="b_place txt">{{.LettersTried}}</span>
+
+        </div>
+        <div class="b_box">
+            {{ if index .HangPos 5}}<div class="hangman-part hangman-body"></div>{{end}} 
+            {{ if index .HangPos 4}}<div class="hangman-part hangman-head"></div>{{end}} 
+            {{ if index .HangPos 6}}<div class="hangman-part hangman-left-arm"></div>{{end}} 
+            {{ if index .HangPos 7}}<div class="hangman-part hangman-right-arm"></div>{{end}} 
+            {{ if index .HangPos 8}}<div class="hangman-part hangman-left-leg"></div>{{end}}
+            {{ if index .HangPos 9}}<div class="hangman-part hangman-right-leg"></div>{{end}}
+            {{ if index .HangPos 0}}<div class="hangman-part hangman-bottom-bar"></div>{{end}}
+            {{ if index .HangPos 1}}<div class="hangman-part hangman-right-bar"></div>{{end}}
+            {{ if index .HangPos 3}}<div class="hangman-part hangman-rotate-bar"></div>{{end}}
+            {{ if index .HangPos 2}}<div class="hangman-part hangman-top-bar"></div>{{end}}
+        </div>
+    </div>
+</body>
+
+</html>

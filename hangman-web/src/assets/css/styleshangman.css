@@ -1,0 +1,250 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+}
+/*______________________________________________________*/
+body{
+	font-size:14px;
+    background: #111;
+	color: #fff;
+}
+
+@media screen and (max-width: 900px) {   /*média quéry*/
+
+}
+
+.top {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+}
+
+
+.top_titre {
+	position: relative;
+    font-size: 1.5em;
+    color: #222;
+	letter-spacing: 2px;
+}
+
+.top_titre::before {
+	content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid #fff;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+.b_body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90%;
+}
+
+.b_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 1%;
+	height: 85%;
+	width: 45%;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+
+.b_place {
+	text-align: center;
+	margin: 2%;
+}
+
+.txt {
+	font-size: 1.5em;
+	letter-spacing: 2px;
+}
+
+.bp_input {
+	display: flex;
+	width: 100%;
+	margin-bottom: 20%;
+	border: none;
+	border-bottom: 4px solid #fff; 
+    border-radius: 5px;
+	background: transparent;
+	color: #fff;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+
+.bp_style{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    padding: 0.5em 1em;
+    transition: 0.5s;
+}
+
+.bp_style:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    color: #111;
+}
+.hangman-part {
+    position: absolute;
+    background-color: #fff;
+    background-size: cover;
+  }
+
+.hangman-head {
+    top: 29%;
+    width: 8%;
+    height: 10%;
+    border-radius: 50px;
+}
+  
+.hangman-body {
+    top: 40%;
+    width: 3%;
+    height: 20%;
+    border-radius: 40px;
+}
+  
+.hangman-left-arm {
+    top: 42%;
+    left: 55%;
+    width: 3%;
+    height: 12%;
+    border-radius: 40px;
+    transform: rotate(-50deg);
+}
+  
+.hangman-right-arm {
+    top: 42%;
+    left: 42%;
+    width: 3%;
+    height: 12%;
+    border-radius: 40px;
+    transform: rotate(50deg);
+}
+  
+.hangman-left-leg {
+    top: 60%;
+    left: 42%;
+    width: 3%;
+    height: 14%;
+    border-radius: 40px;
+    transform: rotate(45deg);
+}
+
+.hangman-right-leg {
+    top: 60%;
+    left: 54%;
+    width: 3%;
+    height: 14%;
+    border-radius: 40px;
+    transform: rotate(-45deg);
+}
+
+.hangman-bottom-bar {
+    top: 75%;
+    width: 35%;
+    height: 2%;
+    border-radius: 40px;
+}
+
+.hangman-right-bar {
+    top: 20%;
+    left: 65%;
+    width: 2%;
+    height: 55%;
+    border-radius: 40px;
+}
+
+.hangman-rotate-bar {
+    top: 18%;
+    left: 60%;
+    width: 2%;
+    height: 15%;
+    border-radius: 40px;
+    transform: rotate(-45deg);
+}
+
+.hangman-top-bar {
+    top: 18%;
+    width: 35%;
+    height: 2%;
+    border-radius: 40px;
+}
